@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Task } from './interfaces/Task';
 import './App.css';
 import { TodoItem } from './components/TodoItem';
+// import { TodoItem } from './components/TodoItem';
 
 const App: React.FC = () => {
   const [task, setTask] = useState<string>("");
