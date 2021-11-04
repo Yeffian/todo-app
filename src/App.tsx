@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Task } from './interfaces/Task';
 import './App.css';
 import { TodoItem } from './components/TodoItem';
-// import { TodoItem } from './components/TodoItem';
 
 const App: React.FC = () => {
   const [task, setTask] = useState<string>("");
@@ -18,6 +17,13 @@ const App: React.FC = () => {
   }
 
   const addTask = (): void => {
+    // Can't make todo's with empty tasks
+    if (task === "" || task === null) {
+      setTask("");
+      setDeadline(0);
+      return;
+    }
+
     const newTask = { taskName: task, deadline: deadline };
     setTodoList([...todoList, newTask]);
     console.log(todoList);

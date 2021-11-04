@@ -14,7 +14,7 @@ export const TodoItem = ({ task, deleteTask }: TodoItemProps ) => {
                 <span>{task.deadline}</span>
             </div>
             <button onClick={() => deleteTask(task.taskName)}>
-                 X
+                ✓
             </button>
         </div>
     );
